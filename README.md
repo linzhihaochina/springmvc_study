@@ -8,6 +8,7 @@
 
 注意：自己造几个用户以及url，上交作业时，文档提供哪个用户有哪个url的访问权限
 
+###作业位置:springmvc_test
 
  
 
@@ -18,3 +19,5 @@
 技术要求：根据SSM整合的思路，进行SSS整合（Spring+SpringMVC+SpringDataJPA）,登录验证使用SpringMVC拦截器实现
 
 【提交时统一数据库名test，用户名和密码root】
+
+###作业位置:my_ssm
