@@ -28,30 +28,12 @@
 </head>
 
 <table>
-    <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>address</th>
-        <th>phone</th>
-        <th><a href="/test/addPage">add</a></th>
-    </tr>
-    <%
-        List<Resume> list = (List<Resume>) request.getAttribute("list");
-        if (list != null && !list.isEmpty()) {
-            for (int i = 0; i < list.size(); i++) {
-    %>
-    <tr>
-        <td><%=list.get(i).getId()%></td>
-        <td><%=list.get(i).getName()%></td>
-        <td><%=list.get(i).getAddress()%></td>
-        <td><%=list.get(i).getPhone()%></td>
-        <td><a href="/test/delete?id=<%=list.get(i).getId()%>">delete</a></td>
-    </tr>
-    <%
-
-            }
-        }
-    %>
+    <form method="post" action="/test/add">
+        name:<input type="text" name="name"/>
+        address:<input type="text" name="address"/>
+        phone:<input type="text" name="phone"/>
+        <input type="submit" value="submit"/>
+    </form>
 </table>
 <body>
 
