@@ -1,9 +1,7 @@
-package com.lagou.edu.mvcframework.pojo;
+package com.youngforcoding.pojo;
 
-import javax.sound.midi.MetaEventListener;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Pattern;
 
 
@@ -20,12 +18,22 @@ public class Handler {
 
     private Map<String,Integer> paramIndexMapping; // 参数顺序,是为了进行参数绑定，key是参数名，value代表是第几个参数 <name,2>
 
+    private Set<String> allowUserNames;
 
     public Handler(Object controller, Method method, Pattern pattern) {
         this.controller = controller;
         this.method = method;
         this.pattern = pattern;
         this.paramIndexMapping = new HashMap<>();
+        this.allowUserNames = new HashSet<>();
+    }
+
+    public Set<String> getAllowUserNames() {
+        return allowUserNames;
+    }
+
+    public void setAllowUserNames(Set<String> allowUserNames) {
+        this.allowUserNames = allowUserNames;
     }
 
     public Object getController() {

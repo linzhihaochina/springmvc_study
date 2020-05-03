@@ -1,9 +1,9 @@
 <html>
 <body>
     <form method="post" action="/test/listInfo">
-        <input type="text" name="username"/>
-        <input type="text" name="password"/>
-        <button type="submit" value="提交"/>
+        username:<input type="text" name="username"/>
+        password:<input type="text" name="password"/>
+        <input type="submit" value="submit"/>
     </form>
 </body>
 </html>

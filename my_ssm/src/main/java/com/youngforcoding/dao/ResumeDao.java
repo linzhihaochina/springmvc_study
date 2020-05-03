@@ -13,5 +13,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  *  *    
  *  
  */
-public interface MyDao extends JpaRepository<Resume, Long>, JpaSpecificationExecutor<Resume> {
+public interface ResumeDao extends JpaRepository<Resume, Long>, JpaSpecificationExecutor<Resume> {
 }

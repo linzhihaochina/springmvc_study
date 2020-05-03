@@ -1,4 +1,4 @@
-package com.lagou.edu.pojo;
+package com.youngforcoding.pojo;
 
 
 import javax.persistence.*;

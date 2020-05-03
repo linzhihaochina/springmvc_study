@@ -1,5 +1,9 @@
 package com.youngforcoding.controller;
 
+import com.youngforcoding.annotation.Controller;
+import com.youngforcoding.annotation.RequestMapping;
+import com.youngforcoding.annotation.Security;
+
 /**
  *    
  *  *  
@@ -9,8 +13,15 @@ package com.youngforcoding.controller;
  *  *    
  *  
  */
+@Controller
+@RequestMapping("/demo")
 public class MyController {
 
-    public MyController() {
+    @RequestMapping("/handle01")
+    @Security(value = {"admin"})
+    public String handle(String username){
+        return "go!!!";
     }
+
+
 }
